@@ -21,12 +21,12 @@ public class Main extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
+		this.getDataFolder().mkdirs();
 		try {
 			File dataFile = new File(this.getDataFolder().getPath()+"/data.txt");
 			if(dataFile.exists()==false) {
 				dataFile.createNewFile();
 			}
-			this.getDataFolder().mkdirs();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
